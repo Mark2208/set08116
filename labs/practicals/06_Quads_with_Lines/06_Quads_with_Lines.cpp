@@ -12,13 +12,24 @@ target_camera cam;
 bool load_content() {
   // *********************************
   // Set geometry type to lines
-
+	
   // *********************************
   // Positions
+
   vector<vec3> positions{
       // *********************************
       // Add the position data for four lines here
+	  vec3(0.0f,0.0f,0.0f),
+	  vec3(1.0f,0.0f,0.0f),
 
+	  vec3(1.0f,0.0f,0.0f),
+	  vec3(1.0f,1.0f,0.0f),
+
+	  vec3(1.0f,1.0f,0.0f),
+	  vec3(0.0f,1.0f,0.0f),
+
+	  vec3(0.0f,1.0f,0.0f),
+	  vec3(0.0f,0.0f,0.0f)
 
 
       // *********************************
@@ -28,6 +39,7 @@ bool load_content() {
                        vec4(1.0f, 0.0f, 0.0f, 1.0f), vec4(1.0f, 0.0f, 0.0f, 1.0f), vec4(1.0f, 0.0f, 0.0f, 1.0f),
                        vec4(1.0f, 0.0f, 0.0f, 1.0f), vec4(1.0f, 0.0f, 0.0f, 1.0f)};
   // Add to the geometry
+  geom.set_type(GL_LINES);
   geom.add_buffer(positions, BUFFER_INDEXES::POSITION_BUFFER);
   geom.add_buffer(colours, BUFFER_INDEXES::COLOUR_BUFFER);
 

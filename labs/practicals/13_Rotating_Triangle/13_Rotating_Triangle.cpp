@@ -1,4 +1,5 @@
 #include <glm\glm.hpp>
+#include <glm\gtc\matrix_transform.hpp>
 #include <graphics_framework.h>
 
 using namespace std;
@@ -13,7 +14,10 @@ float theta = 0.0f;
 bool load_content() {
   // Create triangle data
   // Positions
-  vector<vec3> positions{vec3(0.0f, 1.0f, 0.0f), vec3(-1.0f, -1.0f, 0.0f), vec3(1.0f, -1.0f, 0.0f)};
+	geom.set_type(GL_TRIANGLES);
+  vector<vec3> positions{
+	  vec3(0.0f, 1.0f, 0.0f), vec3(-1.0f, -1.0f, 0.0f), vec3(1.0f, -1.0f, 0.0f)
+  };
   // Colours
   vector<vec4> colours{vec4(1.0f, 0.0f, 0.0f, 1.0f), vec4(1.0f, 0.0f, 0.0f, 1.0f), vec4(1.0f, 0.0f, 0.0f, 1.0f)};
   // Add to the geometry
@@ -48,7 +52,10 @@ bool render() {
   mat4 R;
   // *********************************
   // Create rotation matrix - rotate around Z axis by theta
-
+  float angle = 90;
+  mat4 n(1.0f);
+  R = rotate(n, radians(angle), vec3(0.0f, 0.0f, 1.0f));
+  
   // *********************************
   // Create MVP matrix
   auto V = cam.get_view();

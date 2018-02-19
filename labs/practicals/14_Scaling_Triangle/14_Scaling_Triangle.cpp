@@ -53,7 +53,8 @@ bool render() {
   mat4 S;
   // *********************************
   // Create scale matrix - use uniform scale based on s
-
+  mat4 n(1.0f);
+  S = scale(n, vec3(10, 10, 10));
   // *********************************
   // Create MVP matrix
   auto V = cam.get_view();

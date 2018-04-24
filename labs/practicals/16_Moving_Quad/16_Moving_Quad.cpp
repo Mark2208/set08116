@@ -62,6 +62,8 @@ bool render() {
   mat4 T(1.0f);
   // *********************************
   // Create translation matrix - use pos vector
+  mat4 n(1.0f);
+  T = translate(n, pos);
 
   // *********************************
   // Create MVP matrix

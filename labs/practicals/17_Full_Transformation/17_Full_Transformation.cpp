@@ -74,8 +74,11 @@ bool render() {
   // *********************************
   // Create transformation matrices
   // ******************************
-
-
+  mat4 n(1.0f);
+  T = translate(n, pos);
+  R = rotate(n, radians(90.0f), vec3(0, 1, 0));
+  S = scale(n, vec3(2,2,2));
+  M = T*(R*S);
 
   // Combine matrices to set M - remember multiplication order
 

@@ -18,21 +18,54 @@ bool load_content() {
       // *********************************
       // Add the position data for triangles here, (6 verts per side)
       // Front
-
+	  vec3(-1.0f,1.0f,0.0f),//FTL
+	  vec3(1.0f,1.0f,0.0f),//FTR
+	  vec3(1.0f,-1.0f,0.0f),//FBR
+	  vec3(1.0f,-1.0f,0.0f),//FBR
+	  vec3(-1.0f,-1.0f,0.0f),//FBL
+	  vec3(-1.0f,1.0f,0.0f),//FTL
+		
 
       // Back
-
+	  vec3(-1.0f,1.0f,2.0f),//BTL
+	  vec3(-1.0f,-1.0f,2.0f),//BBL
+	  vec3(1.0f,-1.0f,2.0f),//BBR
+	  vec3(1.0f,-1.0f,2.0f),//BBR
+	  vec3(1.0f,1.0f,2.0f),//BTR
+	  vec3(-1.0f,1.0f,2.0f),//BTL
 
       // Right
-
+	  vec3(1.0f,1.0f,2.0f),//BTR
+	  vec3(1.0f,-1.0f,2.0f),//BBR
+	  vec3(1.0f,-1.0f,0.0f),//FBR
+	  vec3(1.0f,-1.0f,0.0f),//FBR
+	  vec3(1.0f,1.0f,0.0f),//FTR
+	  vec3(1.0f,1.0f,2.0f),//BTR
 
       // Left
-
-
+	  vec3(-1.0f,-1.0f,2.0f),//BBL
+	  vec3(-1.0f,1.0f,2.0f),//BTL
+	  vec3(-1.0f,-1.0f,0.0f),//FBL
+	  vec3(-1.0f,-1.0f,0.0f),//FBL
+	  vec3(-1.0f,1.0f,2.0f),//BTL
+	  vec3(-1.0f,1.0f,0.0f),//FTL
+	  
       // Top
-
-
+	  vec3(-1.0f,1.0f,2.0f),//BTL
+	  vec3(1.0f,1.0f,2.0f),//BTR
+	  vec3(-1.0f,1.0f,0.0f),//FTL
+	  vec3(-1.0f,1.0f,0.0f),//FTL
+	  vec3(1.0f,1.0f,2.0f),//BTR
+	  vec3(1.0f,1.0f,0.0f),//FTR
+	  
       // Bottom
+	  vec3(-1.0f,-1.0f,2.0f),//BBL
+	  vec3(1.0f,-1.0f,0.0f),//FBR
+	  vec3(1.0f,-1.0f,2.0f),//BBR
+	  vec3(-1.0f,-1.0f,2.0f),//BBL
+	  vec3(-1.0f,-1.0f,0.0f),//FBL
+	  vec3(1.0f,-1.0f,0.0f)//FBR
+
 
 
       // *********************************

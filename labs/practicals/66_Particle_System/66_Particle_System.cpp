@@ -78,6 +78,9 @@ bool load_content() {
   glGenBuffers(2, particle_buffers_vbo);
   // *********************************
   // Place initial particle data in buffer 1
+  //glBindBuffer(GL_ARRAY_BUFFER, particle_buffers_vbo[0]);
+
+  //glBufferData(GL_ARRAY_BUFFER, sizeof(particle) * MAX_PARTICLES, particles, GL_DYNAMIC_DRAW);
 
 
 
